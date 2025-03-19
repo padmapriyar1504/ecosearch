@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSearch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfaf6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+        }
+        .green {
+            color: #8DA57A;
+        }
+        .hero {
+            margin: 50px auto;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .waitlist-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #8DA57A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .features {
+            margin-top: 20cm; 
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .feature {
+            text-align: center;
+        }
+        .feature h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .feature p {
+            color: #555;
+        }
+        .footer {
+            background-color: #7b9c79;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        .footer h3 {
+            font-weight: bold;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"><span class="green">Eco</span>Search</div>
+    
+    <div class="hero">
+        <h1>World’s first <span class="green">Green</span> AI</h1>
+        <form class="waitlist-form" method="POST">
+            <input type="email" name="email" placeholder="name@email.com" required>
+            <button type="submit">Join the waitlist</button>
+        </form>
+        {% if message %}
+        <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+    
+    <div class="features">
+        <h2>Build sustainable systems with your search</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <h3><u>Climate Driven</u></h3>
+                <p>We put the revenue earned to work with climate investments in renewables and plantation drives.</p>
+            </div>
+            <div class="feature">
+                <h3><u>Optimized Search</u></h3>
+                <p>We provide quality search results, reducing energy consumption by 300%.</p>
+            </div>
+            <div class="feature">
+                <h3><u>Privacy First</u></h3>
+                <p>We don't collect or store any data. We are a privacy-focused AI search engine.</p>
+            </div>
+            <div class="feature">
+                <h3><u>Minimal Design</u></h3>
+                <p>Our Design System is minimal to reduce the carbon footprints with user interaction.</p>
+                </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>EcoSearch</h3>
+        <p>© 2025 EcoSearch</p>
+    </div>
+</body>
+</html>
